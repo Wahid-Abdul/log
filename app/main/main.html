@@ -1,0 +1,49 @@
+<div style="padding-top:70px;">
+    <ul class="collapsible popout" data-collapsible="accordion">
+        <li ng-repeat="food in foods">
+            <div class="collapsible-header">
+                {{food.name}}
+            </div>
+            <div class="collapsible-body white" style="padding-top:10px; padding-bottom:10px;">
+                <ul class="collection" ng-model="user">
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle">reorder</i>
+                        <span class="title" style="font-size: 17px;">Quantity</span><br><br>
+                        <p style="font-size: 20px;">{{food.quantity || 0}} kgs</p>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle">perm_identity</i>
+                        <span class="title" style="font-size: 17px;">Prepared</span><br><br>
+                        <p style="font-size: 20px;">{{food.time}}</p>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle">perm_identity</i>
+                        <span class="title" style="font-size: 17px;">Location</span><br><br>
+                        <p style="font-size: 20px;">{{food.place}}</p>
+                    </li>
+
+
+                </ul>
+
+
+                <div class="white" style="text-align:center">
+                    <a class="waves-effect waves-light btn blue" ng-show="check()" ng-click="modal($index)">BID</a>
+                    <a class="waves-effect waves-light btn teal right" ng-show="check()"
+                       ng-click="chat($index)">Chat</a>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content" style="padding:10px;">
+        <label for="bidamt">Enter your bid amount</label>
+        <input type="text" id="bidamt" ng-model="bidAmt" placeholder="Enter the bidding amount" class="validate">
+    </div>
+    <div class="modal-footer">
+        <a class=" modal-action modal-close center waves-light btn blue" ng-click="placeBid()">DONE</a>
+    </div>
+</div>

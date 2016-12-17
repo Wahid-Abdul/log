@@ -1,15 +1,17 @@
 <!--<div class="well">-->
   <!--<h3 class="center-align animated zoomInRight">iFeed</h3>-->
 <!--</div>-->
-<div id = "loginCard" class="card-panel blue-text hoverable col s12 m7 l" >
-  <h4 class ="chip left hoverable"><a ui-sref="index"><i class="fa fa-hand-o-left"></i>&nbsp;Back</a></h4>
+<div id = "loginCard" class="card-panel blue-text hoverable col s12 m7 " >
+  <h4 class ="chip left hoverable">
+    <a href="#!"  ui-sref="home"><i class="fa fa-hand-o-left"></i>&nbsp;Back</a>
+  </h4>
   <h4 class="center-align">Sign Up</h4>
   <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12 m6 ">
           <i class="material-icons prefix">account_circle</i>
-          <input id="firstName" type="text" class="validate" ng-model = "fname">
+          <input id="firstName" type="text" class="validate" ng-model = "orgName">
           <label for="firstName">Organization Name</label>
         </div>
         <!--<div class="input-field col s12 m6 ">-->
@@ -31,54 +33,12 @@
         </div>
         <div class="input-field col s12 m6 ">
           <i class="material-icons prefix">lock</i>
-          <input id="password" type="password" class="validate" ng-model = "password" ng-class = "{invalid:passComp,valid:!passComp}" ng-keyup="compare()" >
+          <input id="password" type="password" class="validate" ng-model = "password"  >
           <label for="password">Password</label>
         </div>
       </div>
 
-      <div class="row">
 
-        <!--<div class="input-field col s12 m6">-->
-          <!--<i class="material-icons prefix">lock_outline</i>-->
-          <!--<input id="confirmPassword" type="password" class="validate" ng-model = "cPassword" ng-keyup="compare()" ng-class = "{invalid:passComp,valid:!passComp}"  >-->
-          <!--<label for="confirmPassword">Confirm Password</label>-->
-        <!--</div>-->
-      </div>
-      <!--<div class="row">-->
-        <!--<div class="input-field col s12 m6 ">-->
-          <!--<i class="material-icons prefix">my_location</i>-->
-          <!--<input id="locality" type="text" class="validate" ng-model = "locality">-->
-          <!--<label for="locality">Locality</label>-->
-        <!--</div>-->
-        <!--<div class="input-field col s12 m6 ">-->
-          <!--<i class="material-icons prefix" >location_on</i>-->
-          <!--<input id="city" type="text" ng-model = "city" class="validate">-->
-          <!--<label for="city">City</label>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="switch center-align">-->
-        <!--<label>-->
-          <!--<strong>Public</strong>-->
-          <!--<input type="checkbox" ng-model = "userType">-->
-          <!--<span class="lever"></span>-->
-          <!--<strong>Authority</strong>-->
-        <!--</label>-->
-      <!--</div>-->
-      <!--<br><br>-->
-      <!--<div id="authorityForm" ng-show = "userType">-->
-        <!--<div class="row">-->
-          <!--<div class="input-field col s12 m6 ">-->
-            <!--<select ng-model="authDept" class="browser-default" id = "dept" ng-options="dept for dept in departments">-->
-              <!--<option value="" disabled selected>Tag the Department</option>-->
-            <!--</select>-->
-          <!--</div>-->
-          <!--<div class="input-field col s12 m6">-->
-            <!--<i class="material-icons prefix">perm_identity</i>-->
-            <!--<input id="pos" type="text" class="validate" ng-model = "authDes" >-->
-            <!--<label for="pos">Designation</label>-->
-          <!--</div>-->
-        <!--</div>-->
-      </div>
 
       <button class="btn waves-effect waves-light blue col s5 m2	push-m5 push-s4"  name="action" ng-click="signup();">Signup
         <i class="material-icons right">send</i>

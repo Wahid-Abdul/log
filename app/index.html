@@ -13,28 +13,29 @@
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-</head><div class="well">
-    <h3 class="center-align animated zoomInRight ">Tag Your Trouble</h3>
-</div>
-<div id="mainLogo">
-    <img id="mainImage" src="http://www.moremag.pk/morepics/2016/02/complaint-management-system.jpg">
-</div>
-<div class="row " id="loginSignup">
-    <a ui-sref ="login" class="waves-effect waves-light btn red"><i class="material-icons left">cloud</i>Login</a>
-    <a ui-sref ="signup" class="waves-effect waves-light btn red "><i class="material-icons left">cloud</i>Sign Up!</a>
-</div>
 <body>
 
-
-
-<div class="well container-fluid" style="border:2px solid red">
-    <h3 class="center-align animated zoomInRight">iFeed</h3>
-</div>
-<a ui-sref="login">login</a>
-<a ui-sref="signup">signup</a>
+<!--<a ui-sref="login">login</a>-->
+<!--<a ui-sref="signup">signup</a>-->
+<nav ng-hide="nav" style="background-color: #ECF0F5; ">
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo" style="margin-left: 10px;">iHelp</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a ui-sref="apply">Apply</a></li>
+            <li><a>Logout</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a ui-sref="apply">Apply</a></li>
+            <li><a>Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
  <div ui-view></div>
+</div>
 
 
 <!--[if lt IE 7]>
@@ -49,9 +50,23 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD2kfdxLucSmC7Xn8uMUXYaJyDzLng4JCY",
+    authDomain: "ifeed-4be93.firebaseapp.com",
+    databaseURL: "https://ifeed-4be93.firebaseio.com",
+    storageBucket: "ifeed-4be93.appspot.com",
+    messagingSenderId: "241859651376"
+  };
+  firebase.initializeApp(config);
+</script>
   <script src="app.js"></script>
   <script src="login/login.js"></script>
+  <script src="home/home.js"></script>
   <script src="signup/signup.js"></script>
+  <script src="main/main.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
