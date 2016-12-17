@@ -1,40 +1,68 @@
 <div style="padding-top:70px;">
-    <ul class="collapsible popout" data-collapsible="accordion">
-        <li ng-repeat="food in foods">
-            <div class="collapsible-header">
-                {{food.name}}
+    <div class="card z-depth-3 hoverable" style="padding: 20px;">
+        <div class="row">
+            <div class="input-field col s5">
+                <!--<i class="material-icons prefix">lock</i>-->
+                <input id="locate" type="text" class="validate" ng-model="locate">
+                <label for="locate">Location</label>
             </div>
-            <div class="collapsible-body white" style="padding-top:10px; padding-bottom:10px;">
-                <ul class="collection" ng-model="user">
-                    <li class="collection-item avatar">
-                        <i class="material-icons circle">reorder</i>
-                        <span class="title" style="font-size: 17px;">Quantity</span><br><br>
-                        <p style="font-size: 20px;">{{food.quantity || 0}} kgs</p>
-                    </li>
-                    <li class="collection-item avatar">
-                        <i class="material-icons circle">perm_identity</i>
-                        <span class="title" style="font-size: 17px;">Prepared</span><br><br>
-                        <p style="font-size: 20px;">{{food.time}}</p>
-                    </li>
-                    <li class="collection-item avatar">
-                        <i class="material-icons circle">perm_identity</i>
-                        <span class="title" style="font-size: 17px;">Location</span><br><br>
-                        <p style="font-size: 20px;">{{food.place}}</p>
-                    </li>
+            <a class="btn center-block waves-effect waves-light blue col s2"
+               ng-click="fetch()" style="margin: 15px 0px;">Fetch
+            </a>
+            <div class="input-field col s5" style="z-index: 10000;">
+                <select id="sortSel">
+                    <option value="" disabled selected>Sort By</option>
+                    <option value="quantity">Quantity</option>
+                    <option value="time">Time</option>
+                </select>
+            </div>
+        </div>
 
-
-                </ul>
-
-
-                <div class="white" style="text-align:center">
-                    <a class="waves-effect waves-light btn blue" ng-show="check()" ng-click="modal($index)">BID</a>
-                    <a class="waves-effect waves-light btn teal right" ng-show="check()"
-                       ng-click="chat($index)">Chat</a>
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li ng-repeat="food in foods">
+                <div class="collapsible-header">
+                    {{food.name}}
                 </div>
-            </div>
-        </li>
+                <div class="collapsible-body white" style="padding-top:10px; padding-bottom:10px;">
+                    <ul class="collection" ng-model="user">
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle">reorder</i>
+                            <span class="title" style="font-size: 17px;">Quantity</span><br><br>
+                            <p style="font-size: 20px;">{{food.quantity || 0}} kgs</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle">perm_identity</i>
+                            <span class="title" style="font-size: 17px;">Prepared</span><br><br>
+                            <p style="font-size: 20px;">{{food.time}}</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle">perm_identity</i>
+                            <span class="title" style="font-size: 17px;">Location</span><br><br>
+                            <p style="font-size: 20px;">{{food.address}}</p>
+                        </li>
 
-    </ul>
+
+                    </ul>
+
+
+                    <div class="white" style="text-align:center">
+                        <a class="waves-effect waves-light btn blue" ng-show="check()" ng-click="modal($index)">BID</a>
+                        <a class="waves-effect waves-light btn teal right" ng-show="check()"
+                           ng-click="chat($index)">Chat</a>
+                    </div>
+                    <div class="row">
+                      <div class="col s4"></div>
+                      <div class="col s4"><button class="btn waves-effect waves-light" style="margin-left: 23%;" type="submit" name="action" ng-click="">
+                        Collect!
+                       </button></div>
+                      <div class="col s4"></div>
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
 </div>
 
 
