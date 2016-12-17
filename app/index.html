@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="iFeed" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="iFeed" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="iFeed" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="iFeed" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iFeed</title>
+  <base href="/">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head><div class="well">
+    <h3 class="center-align animated zoomInRight ">Tag Your Trouble</h3>
+</div>
+<div id="mainLogo">
+    <img id="mainImage" src="http://www.moremag.pk/morepics/2016/02/complaint-management-system.jpg">
+</div>
+<div class="row " id="loginSignup">
+    <a ui-sref ="login" class="waves-effect waves-light btn red"><i class="material-icons left">cloud</i>Login</a>
+    <a ui-sref ="signup" class="waves-effect waves-light btn red "><i class="material-icons left">cloud</i>Sign Up!</a>
+</div>
+<body>
+
+
+
+<div class="well container-fluid" style="border:2px solid red">
+    <h3 class="center-align animated zoomInRight">iFeed</h3>
+</div>
+<a ui-sref="login">login</a>
+<a ui-sref="signup">signup</a>
+ <div ui-view></div>
+
+
+<!--[if lt IE 7]>
+      <p class="br owsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+  <script src="login/login.js"></script>
+  <script src="signup/signup.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
